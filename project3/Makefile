@@ -12,10 +12,21 @@ CAPS = 0
 NUMBERS = 0
 SYMBOLS = 0
 
+default:
+	./$(SCRIPT) -w $(WORDS) -c $(CAPS) -n $(NUMBERS) -s $(SYMBOLS)
+
+w:
+	./$(SCRIPT) -w $(WORDS)
+
+c:
+	./$(SCRIPT) -c $(WORDS)
+
+n:
+	./$(SCRIPT) -n $(WORDS)
+
 password:
 	./$(SCRIPT) -w $(WORDS) -c $(CAPS) -n $(NUMBERS) -s $(SYMBOLS)
 
 clean:
 	rm -f *.pyc
 
-	
