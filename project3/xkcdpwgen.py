@@ -5,6 +5,7 @@ import random
 # load words from a file into a list
 def load_words(filename):
     valid_words = []
+    
     with open(filename) as word_file:
         # remove words more than 8 characters long
         valid_words = [word.strip() for word in word_file.readlines() if len(word.strip()) <= 8]
