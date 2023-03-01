@@ -56,5 +56,5 @@ def main():
     password = generate_password(word_list, args.words, args.caps, args.numbers, args.symbols) # generate the password
     print(password)
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
