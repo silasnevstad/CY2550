@@ -7,9 +7,10 @@ EXECUTABLE = xkcdpwgen
 all: $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJ)
-	$(CXX) $(OBJ) -o $@
+	$(CXX) $(CXXFLAGS) $^ -o $@
 
-main.o: main.cpp
+xkcdpwgen.o: xkcdpwgen.cpp
+# usage: xkcdpwgen.py [-h] [-w WORDS] [-c CAPS] [-n NUMBERS] [-s SYMBOLS]
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:

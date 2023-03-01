@@ -104,20 +104,37 @@ std::string generate_password(const std::vector<std::string>& word_list, int num
 int main(int argc, char* argv[]) {
     int num_words = 4, num_caps = 0, num_numbers = 0, num_symbols = 0;
     // create a command line argument parser
-    if (argc > 1) {
-        std::istringstream iss(argv[1]);
-        iss >> num_words;
-        if (argc > 2) {
-            std::istringstream iss(argv[2]);
+    // if (argc > 1) {
+    //     std::istringstream iss(argv[1]);
+    //     iss >> num_words;
+    //     if (argc > 2) {
+    //         std::istringstream iss(argv[2]);
+    //         iss >> num_caps;
+    //         if (argc > 3) {
+    //             std::istringstream iss(argv[3]);
+    //             iss >> num_numbers;
+    //             if (argc > 4) {
+    //                 std::istringstream iss(argv[4]);
+    //                 iss >> num_symbols;
+    //             }
+    //         }
+    //     }
+    // }
+    // parse command line arguments, can be in any order and are optional
+    for (int i = 1; i < argc; ++i) {
+        std::string arg = argv[i];
+        if (arg == "-w") {
+            std::istringstream iss(argv[i + 1]);
+            iss >> num_words;
+        } else if (arg == "-c") {
+            std::istringstream iss(argv[i + 1]);
             iss >> num_caps;
-            if (argc > 3) {
-                std::istringstream iss(argv[3]);
-                iss >> num_numbers;
-                if (argc > 4) {
-                    std::istringstream iss(argv[4]);
-                    iss >> num_symbols;
-                }
-            }
+        } else if (arg == "-n") {
+            std::istringstream iss(argv[i + 1]);
+            iss >> num_numbers;
+        } else if (arg == "-s") {
+            std::istringstream iss(argv[i + 1]);
+            iss >> num_symbols;
         }
     }
 
