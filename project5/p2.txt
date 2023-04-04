@@ -1,1 +1,1 @@
-Congrats! Your server started, but your system allowed 2 files to be accessed that were not needed. snev 2023-04-04 23:39:08.145235437 +0000 UTC m=+4.725887690 12HPVWeSOVCMDnnDS8X1WPgSKV+kYQlRzapG7PmJvqE=
+Congrats! Your server started, but your system allowed 0 files to be accessed that were not needed. snev 2023-04-04 23:39:08.145235437 +0000 UTC m=+4.725887690 12HPVWeSOVCMDnnDS8X1WPgSKV+kYQlRzapG7PmJvqE=
