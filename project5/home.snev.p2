@@ -1,0 +1,20 @@
+abi <abi/3.0>,
+include <tunables/global>
+
+/home/snev/cy2550/project5/p2 flags=(enforce) {
+  include <abstractions/base>
+  /home/snev/cy2550/project5/p2 mr,
+  /tmp/project* rw,
+  /home/snev/.project2/** rw,
+  /var/log/syslog r,
+  /etc/fstab r,
+  /proc/version r,
+  /proc/buddyinfo r,
+  /etc/crontab r,
+  /run/systemd/resolve/stub-resolv.conf r,
+  /etc/passwd r,
+  /etc/hosts r,
+  /home/snev/cy2550/project5/template r,
+  network inet tcp,
+  network inet6 tcp,
+}
